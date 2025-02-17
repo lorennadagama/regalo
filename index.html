@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boarding Pass - Ana Lucia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .boarding-pass {
+            width: 380px;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            position: relative;
+            border-left: 5px solid #d92332;
+        }
+
+        .airline {
+            font-size: 22px;
+            font-weight: bold;
+            color: #d92332;
+        }
+
+        .flight-info {
+            margin-top: 15px;
+            text-align: left;
+        }
+
+        .flight-info div {
+            margin-bottom: 10px;
+        }
+
+        .big {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .qr-code {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .qr-code img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .footer {
+            font-size: 12px;
+            margin-top: 10px;
+            color: gray;
+            font-style: italic;
+        }
+
+        .barcode {
+            margin-top: 15px;
+            height: 40px;
+            background: repeating-linear-gradient(
+                90deg,
+                black 0px,
+                black 2px,
+                white 2px,
+                white 4px
+            );
+        }
+    </style>
+</head>
+<body>
+
+    <div class="boarding-pass">
+        <div class="airline">✈️ Love Airlines</div>
+        <hr>
+        <div class="flight-info">
+            <div><strong>Passageira:</strong> Ana Lucia Falconi Arroyo</div>
+            <div><strong>Voo:</strong> LOV 0219</div>
+            <div><strong>Origem:</strong> <span class="big">LIM</span> - Lima, Peru</div>
+            <div><strong>Destino:</strong> <span class="big">MAD</span> - Madrid, Espanha</div>
+            <div><strong>Data:</strong> 19/02/2025</div>
+            <div><strong>Portão:</strong> ❤️ | <strong>Assento:</strong> VIP</div>
+        </div>
+        
+        <div class="qr-code">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://teamo.com" alt="QR Code">
+        </div>
+        
+        <div class="barcode"></div>
+        
+        <div class="footer">Apresente este bilhete para embarcar no voo do amor. 💕</div>
+    </div>
+
+</body>
+</html>
